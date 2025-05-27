@@ -94,10 +94,7 @@ document.querySelector('.button-menu').addEventListener('click', (event) => {
 
 function turnIntoText(text){
 
-    // let lines = event.target.value.split('\n');
-
     let lines = text.value.split('\n');
-
 
     let change = 0;
 
@@ -200,12 +197,6 @@ function turnIntoText(text){
 }
 
 
-
-
-
-
-
-
 /* DISPLAY PREVIEW */
 
 document.querySelectorAll('.button-preview')[0].addEventListener('click', (event) => {
@@ -220,10 +211,7 @@ document.querySelectorAll('.button-preview')[0].addEventListener('click', (event
         document.querySelectorAll('.button-preview')[0].style.display = 'none';
     }
 
-
-
     turnIntoText(document.querySelector('textarea'));
-
 
 });
 
@@ -242,10 +230,7 @@ document.querySelectorAll('.button-preview')[1].addEventListener('click', () => 
 
     turnIntoText(document.querySelector('textarea'));
 
-
 });
-
-
 
 
 
@@ -253,111 +238,9 @@ document.querySelectorAll('.button-preview')[1].addEventListener('click', () => 
 
 document.querySelector('textarea').addEventListener('input', (event) => {
 
-
     turnIntoText(event.target);
 
-    // let lines = event.target.value.split('\n');
-    // let change = 0;
-
-    // lines = lines.map( (item) => {
-
-    //     if( item.match(/`{3}/) && change === 0 ){
-    //         change = 1; 
-    //         return '<pre class="threeBacktits roboto-mono-regular">';
-    //     }
-
-    //     else if( item.match(/`{3}/) && change === 1 ){
-    //         change = 0;
-    //         return '</pre>';
-    //     }
-
-    //     if(change === 1){
-    //         const span = document.createElement('span');
-    //         span.textContent = item;
-    //         return `${span.innerHTML}<br>` ;
-    //     }   
-
-    //     return item.trim();
-
-    // });
-
-
-    // lines = lines.map( line => line.replace(/^#{1}\s+(.*)\s*$/, "<h1 class='roboto-slab-bold markdown-main-title'>$1</h1>"));
-    // lines = lines.map( line => line.replace(/^#{2}\s+(.*)\s*$/, "<h2 class='roboto-slab-light sub-titleH2'>$1</h2>"));
-    // lines = lines.map( line => line.replace(/^#{3}\s+(.*)\s*$/, "<h3 class='roboto-slab-bold sub-titleH3'>$1</h3>"));
-    // lines = lines.map( line => line.replace(/^#{4}\s+(.*)\s*$/, "<h4 class='roboto-slab-bold sub-titleH4'>$1</h4>"));
-    // lines = lines.map( line => line.replace(/^#{5}\s+(.*)\s*$/, "<h5 class='roboto-slab-bold sub-titleH5'>$1</h5>"));
-    // lines = lines.map( line => line.replace(/^#{6}\s+(.*)\s*$/, "<h6 class='roboto-slab-bold sub-titleH6'>$1</h6>"));
-    // lines = lines.map( line => line.replace(/^>\s+(.*)\s*$/, "<p class='container-grey roboto-slab-bold'>$1</p>"));
-    // lines = lines.map( line => line.replace(/\[(.*?)\]\((.*?)\)/g, "<a class='markdown-link' href='$2' target='_blank'>$1</a>"));
-
-
-    // for(let i = 0; i < lines.length; i++){
-
-    //     if(lines[i].match(/^1\.\s+(.*)/)){
-    //         lines[i] = lines[i].replace(/^1\.\s+(.*)/, "<ol class='list-markdown roboto-slab-regular text-markdown'><li>$1</li>") ;
-    //     }
-
-    //     if(lines[i].match(/^[0-9]\.\s+(.*)/)){
-
-    //         if( lines[i+1] === '' ){
-    //             lines[i] = lines[i].replace(/^[0-9]\.\s+(.*)/, "<li>$1</li></ol>")
-    //         }
-    //         else{
-    //             lines[i] = lines[i].replace(/^[0-9]\.\s+(.*)/, "<li>$1</li>")
-    //         }
-
-    //     }
-
-    // }
-
-
-    // for(let i = 0; i < lines.length; i++){
-
-    //     if(lines[i-1] === '' && lines[i].match(/^\-\s+(.*)/)){
-    //         lines[i] = lines[i].replace(/^\-\s+(.*)/, "<ul class='unordered-list roboto-slab-regular text-markdown'><li>$1</li>");
-    //     }
-
-    //     else if(lines[i].match(/^\-\s+(.*)/)){
-
-    //         if( lines[i+1] === '' ){
-    //             lines[i] = lines[i].replace(/^\-\s+(.*)/, "<li>$1</li></ul>")
-    //         }
-    //         else{
-    //             lines[i] = lines[i].replace(/^\-\s+(.*)/, "<li>$1</li>");
-    //         }
-            
-    //     }
-
-    // }
-
-
-    // lines = lines.map(line => line.replace(/^([a-zA-Z].*)$/, "<p class='roboto-slab-regular text-markdown'>$1</p>"));
-    // lines = lines.map(line => line.replace(/(?<!`)`([^`]+)`(?!`)/g, (match, content) => {
-    
-    //     const span = document.createElement('span');
-    //     const text = document.createTextNode(content);
-    //     console.log('text', text);
-    //     span.classList.add('oneBacktits');
-    //     span.textContent = content;
-    //     return span.outerHTML;
-
-    // } ) );
-
-
-    // for(let i = 0; i < lines.length; i++){
-
-    //     if(lines[i] === ''){  
-    //         lines[i] = '<br>';
-    //     }   
-
-    // }
-
-    // document.querySelector('.result').innerHTML = lines.join('');
-
-
 });
-
 
 
 
@@ -430,13 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             }
 
-           
-            // document.querySelector('.result').innerHTML = '';
-
             turnIntoText(document.querySelector('textarea'));
-
-
-
 
         }
 
@@ -460,23 +337,16 @@ document.addEventListener('DOMContentLoaded', () => {
         currentNameDocument = document.querySelector('input').value;
     });
 
-
     document.querySelector('input').addEventListener('change', () => {
-
-        // console.log('input');
-        // document.querySelector('textarea').value = file.content;
-        // console.log(document.querySelector('input').value);
 
         for(const file of arrayJSON){
 
             if(currentNameDocument === file.name){
-                // console.log('for...of', file.name);
                 file.name = document.querySelector('input').value;
             }
 
         }
 
-        
         document.querySelectorAll('.your-file .text').forEach( (item) => {
 
             item.querySelector('span:nth-of-type(2)').textContent;
@@ -494,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/* CREATE DOCUMENT */
 
 document.querySelector('.button-document').addEventListener('click', () => {
 
@@ -550,10 +421,6 @@ document.querySelector('.button-document').addEventListener('click', () => {
 
 
 
-
-
-
-
 /* OPEN DIALOG BOX */
 
 document.querySelector('.button-delete').addEventListener('click', (event) => {
@@ -577,19 +444,12 @@ document.querySelector('.button-dialog-confirm').addEventListener('click', ( ) =
 
     }
 
-    // console.log('indexToCut', indexToCut);
-
     arrayJSON.splice(indexToCut, 1);
 
     document.querySelectorAll('.your-file .text').forEach( (item) => {
 
-        // item.querySelector('span:nth-of-type(2)').textContent;
-
         if(document.querySelector('input').value === item.querySelector('span:nth-of-type(2)').textContent){
-            // item.querySelector('span:nth-of-type(2)').parentElement;
-            console.log(item.querySelector('span:nth-of-type(2)').parentElement);
             item.querySelector('span:nth-of-type(2)').parentElement.remove();
-
         }
 
     } );
@@ -604,7 +464,7 @@ document.querySelector('.button-dialog-confirm').addEventListener('click', ( ) =
 
 document.querySelector('.button-save').addEventListener('click', ( ) => {
 
-    console.log('button-save');
+    // console.log('button-save');
 
     for(let i = 0; i < arrayJSON.length; i++){
 
@@ -616,14 +476,12 @@ document.querySelector('.button-save').addEventListener('click', ( ) => {
 
     }
 
-
-    console.log('indexToSave', indexToSave);
-    
-    console.log(document.querySelector('textarea').value);
+    // console.log('indexToSave', indexToSave);
+    // console.log(document.querySelector('textarea').value);
 
     arrayJSON[indexToSave].content = document.querySelector('textarea').value; 
 
-    console.log(arrayJSON);
+    // console.log(arrayJSON);
 
 });
 

@@ -4,20 +4,6 @@
   /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—48 */
 
 
-  /*MARGIN PADDING*/
-
-  /* --space-8px: 0.5rem;
-  --space-16px: 1rem;
-  --space-24px: 1.5rem;
-  --space-32px: 2rem;
-  --space-40px: 2.5rem;
-  --space-48px: 3rem;
-  --space-64px: 4rem;
-  --space-128px: 8rem;
-  --space-144px: 9rem;
-  --space-184px: 11.5rem; */
-
-
   /*LIGHT*/
 
   --color-background-main-header: #F5F5F5;  
@@ -46,9 +32,6 @@ body[data-theme="dark"]{
 body{
   min-width: 17.5rem;
   min-height: 100vh;
-
-  /* overflow: hidden; */
-
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 3.5rem 1fr;
@@ -143,7 +126,6 @@ img{
 
 .button:hover{
   cursor: pointer;
-  /* filter: brightness(1.2) opacity(0.8); */
   transition: all 0.5s;
 }
 
@@ -205,17 +187,11 @@ label img{
   color: #7C8187;
 }
 
-
-
 input[type="text"]{
   background: transparent;
   border: none;
   color: #fff;
 }
-
-
-
-
 
 input[type="text"]:focus{
   outline: none;
@@ -408,10 +384,6 @@ input[type="text"]:focus{
 }
 
 textarea{
-
-
-
-
   flex-grow: 1;
   width: 100%;
   background: var(--color-background-main);
@@ -443,6 +415,13 @@ textarea:focus{
   color: var(--color-text-textarea);
   padding: 1.5rem;
   flex-grow: 1;
+}
+
+.result pre {
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    word-break: break-all; 
+    overflow-x: auto; 
 }
 
 
@@ -509,7 +488,7 @@ textarea:focus{
 }
 
 .container-grey{
-  background: #F5F5F5;
+  background: var(--color-background-main-header);
   width: 100%;
   border-left: 0.25rem solid #E46643;
   border-top-left-radius: 0.25rem;
@@ -527,7 +506,7 @@ textarea:focus{
 }
 
 .threeBacktits{
-  background: #F5F5F5;
+  background: var(--color-background-main-header);
   width: 100%;
   font-size: 0.875rem;
   padding: 0.5rem 1rem 0.5rem 2.8rem;
